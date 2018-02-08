@@ -21,13 +21,13 @@ public class UserPos extends HttpRequest {
         PositionX[current] = lat;
         PositionY[current] = lng;
         current++;
-        //Log.d("GMAP", "addPosition: current" + current);
+        //Log.d("GMAP4", "addPosition: current" + current);
         if(current == 10){
             startCheck = true;
             current = 0;
         }
         if (startCheck == true){
-            //Log.d("GMAP2", "addPosition: startcheck " + startCheck);
+            //Log.d("GMAP5", "addPosition: startcheck " + startCheck);
             for (int i = 0;i < 10;i++){
                 xSum += PositionX[i];
                 ySum += PositionY[i];

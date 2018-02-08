@@ -38,10 +38,6 @@ public class SplashScreen extends AppCompatActivity {
             username.setText(b.getString("username"));
         }
 
-
-
-
-
     }
     public void changeIntent(String username,String hash){
         Intent myIntent = new Intent(SplashScreen.this, Maps.class);
@@ -67,7 +63,7 @@ public class SplashScreen extends AppCompatActivity {
         if(cm.getActiveNetworkInfo() != null) {
             HttpRequest test = new HttpRequest();
             String urlParameters = "username=" + username.getText() + "&password=" + password.getText();
-            test.setValues("http://192.168.216.119/TreasureHunt/login_user.php", urlParameters, this);
+            test.setValues("http://192.168.1.2/TreasureHunt/login_user.php", urlParameters, this);
             test.execute();
 
 

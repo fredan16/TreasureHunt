@@ -1,0 +1,5 @@
+Add Loading Screen, Gif - Maps.java
+Remove Event at failed/finnished event. - Maps.java
+add score to database when game is over - Maps.java
+
+

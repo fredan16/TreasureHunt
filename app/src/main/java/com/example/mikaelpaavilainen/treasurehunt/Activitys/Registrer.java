@@ -32,7 +32,7 @@ public class Registrer extends AppCompatActivity {
     public void getAll(){
         HttpRequest get_usernames = new HttpRequest();
         String urlParameters ="";
-        get_usernames.setValues("http://192.168.216.119/TreasureHunt/get_names.php",urlParameters,this);
+        get_usernames.setValues("http://192.168.1.2/TreasureHunt/get_names.php",urlParameters,this);
         get_usernames.execute();
 
         while(get_usernames.respons.equals("")){
@@ -57,7 +57,7 @@ public class Registrer extends AppCompatActivity {
         //get all emails
         HttpRequest get_emails = new HttpRequest();
         String urlParameters_e ="";
-        get_emails.setValues("http://192.168.216.119/TreasureHunt/get_emails.php",urlParameters_e,this);
+        get_emails.setValues("http://192.168.1.2/TreasureHunt/get_emails.php",urlParameters_e,this);
         get_emails.execute();
 
         while(get_emails.respons.equals("")){
@@ -115,7 +115,7 @@ public class Registrer extends AppCompatActivity {
                 HttpRequest add_user = new HttpRequest();
                 String urlParameters ="username="+username.getText()+"&password="+pass1.getText()+"&email="+email.getText();
                 Log.d("HTTPSN", "register: params" + urlParameters);
-                add_user.setValues("http://192.168.216.119/TreasureHunt/add_user.php",urlParameters,this);
+                add_user.setValues("http://192.168.1.2/TreasureHunt/add_user.php",urlParameters,this);
                 add_user.execute();
                 while(add_user.respons.equals("")){
 
